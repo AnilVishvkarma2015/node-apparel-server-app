@@ -2,8 +2,8 @@ require('rootpath');
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const jwt = require('./shared/jwt');
-const errorHandler = require('./shared/error-handler');
+const jwt = require('./lib/shared/jwt');
+const errorHandler = require('./lib/shared/error-handler');
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -18,8 +18,9 @@ app.use(function(req, res, next) {
 });
 
 app.use(jwt());
-app.use('/users', require('./users/user.controller'));
-app.use('/products', require('./products/product.controller'));
+app.use('/users', require('./lib/users/user.controller'));
+app.use('/products', require('./lib/products/product.controller'));
+app.use('/suppliers', require('./lib/suppliers/supplier.controller'));
 app.use(errorHandler);
 
 const port = process.env.NODE_ENV === 'production' ? 80 : 4000;
