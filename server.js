@@ -24,7 +24,7 @@ app.use('/suppliers', require('./lib/suppliers/supplier.controller'));
 app.use('/purchaseorders', require('./lib/purchaseorders/purchaseorder.controller'));
 app.use(errorHandler);
 
-const port = process.env.NODE_ENV === 'production' ? 80 : 4000;
-const server = app.listen(port, '0.0.0.0', () => {
-    console.log("Server started and runni on port:" + port);
+const port = process.env.PORT || 4000;
+const server = app.listen(port, () => {
+    console.log("Server started and running on port:" + port);
 })

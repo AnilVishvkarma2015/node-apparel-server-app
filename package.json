@@ -4,7 +4,12 @@
   "description": "Server Application for Apparel Store.",
   "main": "server.js",
   "scripts": {
-    "test": "make test"
+    "start": "node server.js",
+    "test": "node test"
+  },
+  "engines": {
+    "node": "8.11.1",
+    "npm": "5.6.0"
   },
   "repository": {
     "type": "git",
@@ -17,6 +22,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
     "express": "^4.16.3",
     "express-jwt": "^5.3.1",
     "jsonwebtoken": "^8.3.0",
