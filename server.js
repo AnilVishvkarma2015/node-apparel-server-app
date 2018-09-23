@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const config = require('config');
 const log = require('log4js').getLogger('application');
+const responseTime = require('response-time');
 
 const jwt = require('./lib/shared/jwt');
 const errorHandler = require('./lib/shared/error-handler');
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use(jwt());
+app.use(responseTime());
 app.use('/users', require('./lib/users/user.controller'));
 app.use('/products', require('./lib/products/product.controller'));
 app.use('/suppliers', require('./lib/suppliers/supplier.controller'));
