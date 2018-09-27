@@ -18,5 +18,6 @@
                 "level": "trace"
             }
         }
-    }
+    },
+    "tokenExpireInTime": 600
 }

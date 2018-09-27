@@ -16,5 +16,6 @@
                 "level": "debug"
             }
         }
-    }
+    },
+    "tokenExpireInTime": 600
 }
