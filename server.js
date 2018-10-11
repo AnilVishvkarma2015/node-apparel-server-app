@@ -20,6 +20,7 @@ app.use('/users', require('./lib/users/user.controller'));
 app.use('/products', require('./lib/products/product.controller'));
 app.use('/suppliers', require('./lib/suppliers/supplier.controller'));
 app.use('/purchaseorders', require('./lib/purchaseorders/purchaseorder.controller'));
+app.use('/stocks', require('./lib/stocks/stock.controller'));
 app.use(errorHandler);
 
 const port = process.env.PORT || config.get('port');
