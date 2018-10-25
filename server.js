@@ -21,6 +21,7 @@ app.use('/products', require('./lib/products/product.controller'));
 app.use('/suppliers', require('./lib/suppliers/supplier.controller'));
 app.use('/purchaseorders', require('./lib/purchaseorders/purchaseorder.controller'));
 app.use('/stocks', require('./lib/stocks/stock.controller'));
+app.use('/customers', require('./lib/customers/customer.controller'));
 app.use(errorHandler);
 
 const port = process.env.PORT || config.get('port');

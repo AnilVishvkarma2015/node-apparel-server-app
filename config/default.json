@@ -17,5 +17,5 @@
             }
         }
     },
-    "tokenExpireInTime": 600
+    "tokenExpireInTime": 600000
 }
