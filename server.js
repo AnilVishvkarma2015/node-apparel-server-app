@@ -23,6 +23,7 @@ app.use('/purchaseorders', require('./lib/purchaseorders/purchaseorder.controlle
 app.use('/stocks', require('./lib/stocks/stock.controller'));
 app.use('/customers', require('./lib/customers/customer.controller'));
 app.use('/sales', require('./lib/sales/sale.controller'));
+app.use('/utility', require('./lib/shared/index'));
 app.use(errorHandler);
 
 const port = process.env.PORT || config.get('port');

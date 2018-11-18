@@ -2,6 +2,8 @@
     "port": 3000,
     "authenticationSecret": "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING",
     "MONGODB_URL": "mongodb://anil:anil1234@ds263172.mlab.com:63172/node-user-service-master",
+    "emailUser": "avish.developer@gmail.com",
+    "emailPass": "dimpanil@developer",
     "logging": {
         "appenders": {
             "default": {
